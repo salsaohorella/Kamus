@@ -16,7 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="128dp"/>
     <TextView
-        android:id="@+id/tx_loading"
+        android:id="@+id/tvLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/progress_bar"

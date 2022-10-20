@@ -88,6 +88,7 @@ public class SplashActivity extends AppCompatActivity {
         @Override
         protected void onProgressUpdate(Integer... values) {
             binding.progressBar.setProgress(values[0]);
+            binding.tvLoading.setText("Loading " + values[0] + "% ...");
         }
 
         @Override
@@ -95,7 +96,6 @@ public class SplashActivity extends AppCompatActivity {
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-            super.onPostExecute(unused);
         }
     }
 
