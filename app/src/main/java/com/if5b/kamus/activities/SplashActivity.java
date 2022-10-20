@@ -11,6 +11,7 @@ import com.if5b.kamus.R;
 import com.if5b.kamus.database.KamusHelper;
 import com.if5b.kamus.databinding.ActivitySplashBinding;
 import com.if5b.kamus.models.Kamus;
+import com.if5b.kamus.utilities.AppPreference;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
