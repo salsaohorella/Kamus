@@ -54,8 +54,8 @@ public class SplashActivity extends AppCompatActivity {
 
                 progress = 30;
                 publishProgress((int) progress);
-                Double progressMaxInsert = 88.0;
-                Double progressDiff = (progressMaxInsert = progress) / kamusEnglishIndonesia.size();
+                Double progressMaxInsert = 80.0;
+                Double progressDiff = (progressMaxInsert - progress) / kamusEnglishIndonesia.size();
 
                 for (Kamus kamus : kamusEnglishIndonesia) {
                     kamushelper.insertDataEnglishIndonesia(kamus);
@@ -66,8 +66,6 @@ public class SplashActivity extends AppCompatActivity {
                 kamushelper.close();
                 appPreference.setFirstRun(false);
                 publishProgress((int) maxprogress);
-
-
             }else {
                 try {
                     synchronized (this){
@@ -80,7 +78,6 @@ public class SplashActivity extends AppCompatActivity {
                 }catch (Exception e){
                     e.printStackTrace();
                 }
-
             }
             return null;
         }
