@@ -66,7 +66,7 @@ public class KamusHelper {
 
     public ArrayList<Kamus> getAllDataEnglishIndonesia() {
         Cursor cursor = database.query(TABLE_ENGLISH_INDONESIA_NAME, null, null, null, null,
-                _ID, " ASC", null);
+                null,_ID + " ASC", null);
         cursor.moveToFirst();
         ArrayList<Kamus> arrayList = new ArrayList<>();
         Kamus kamus;
