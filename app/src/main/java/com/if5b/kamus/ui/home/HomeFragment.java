@@ -10,11 +10,15 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.if5b.kamus.adapters.KamusViewAdapter;
+import com.if5b.kamus.database.KamusHelper;
 import com.if5b.kamus.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
+    private KamusViewAdapter kamusViewAdapter;
+    private KamusHelper kamusHelper;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
