@@ -11,6 +11,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 
 import com.if5b.kamus.models.Kamus;
 
@@ -62,6 +63,17 @@ public class KamusHelper {
         }
         cursor.close();
         return arrayList;
+    }
+    public void beginTransaction(){
+        database.beginTransaction();
+    }
+    public void insertTransactionDataEnglishIndonesia(Kamus kamus) {
+        String sql = "INSERT INTO " + TABLE_ENGLISH_INDONESIA_NAME + " (" + ENGLISH_INDONESIA_TITLE + ", " + ENGLISH_INDONESIA_DESCRIPTION + ") VALUES (?, ?)";
+        SQLiteStatement stmt = database.compileStatement(sql);
+        stmt.bindString(1, kamus.getTitle());
+        stmt.bindString(2, kamus.getDescription());
+        stmt.execute();
+        stmt.clearBindings();
     }
 
     public ArrayList<Kamus> getAllDataEnglishIndonesia() {

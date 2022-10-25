@@ -57,11 +57,11 @@ public class SplashActivity extends AppCompatActivity {
                 Double progressMaxInsert = 80.0;
                 Double progressDiff = (progressMaxInsert - progress) / kamusEnglishIndonesia.size();
 
-                for (Kamus kamus : kamusEnglishIndonesia) {
-                    kamushelper.insertDataEnglishIndonesia(kamus);
-                    progress += progressDiff;
-                    publishProgress((int) progress);
-                }
+//                for (Kamus kamus : kamusEnglishIndonesia) {
+//                    kamushelper.insertDataEnglishIndonesia(kamus);
+//                    progress += progressDiff;
+//                    publishProgress((int) progress);
+//                }
 
                 kamushelper.close();
                 appPreference.setFirstRun(false);
